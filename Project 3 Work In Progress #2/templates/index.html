@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Car Make And Model Distribution</title>
+  <style>
+    .dropdown-content{
+
+    }
+    /* Add CSS styles for layout */
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 20px;
+    }
+    .chart-container {
+      width: 600px;
+      height: 400px;
+      margin-top: 20px;
+    }
+  </style>
+    
+</head>
+
+<body>
+    <div class="container">
+      <button onclick="toggleDropdown()">Dropdown</button>
+      <!-- Corrected class name without the extra dot -->
+      <div class="dropdown-content">
+        <!-- Dropdown for selecting years -->
+        <label for="year-select">Select Year:</label>
+        <select id="year-select">
+        <option value="1997">1997</option>
+        <option value="1998">1998</option>
+        <option value="1999">1999</option>
+        <option value="2000">2000</option>
+        <option value="2002">2002</option>
+        <option value="2003">2003</option>
+        <option value="2008">2008</option>
+        <option value="2010">2010</option>
+        <option value="2011">2011</option>
+        <option value="2012">2012</option>
+        <option value="2013">2013</option>
+        <option value="2014">2014</option>
+        <option value="2015">2015</option>
+        <option value="2016">2016</option>
+        <option value="2017">2017</option>
+        <option value="2018">2018</option>
+        <option value="2019">2019</option>
+        <option value="2020">2020</option>
+        <option value="2021">2021</option>
+        <option value="2022">2022</option>
+        <option value="2023">2023</option>
+        <option value="2024">2024</option>
+          <!-- Add more years as needed -->
+        </select>
+        <!-- Container for the pie chart -->
+        <div id="chart-container" class="chart-container">
+          <!-- The pie chart will be displayed here -->
+        </div>
+      </div>
+    </div>
+
+  <!-- Include necessary scripts for chart generation -->
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+  <script src="Static/JavaScript/chart-library.js"></script>
+  <script src="Static/JavaScript/piechart.js"></script>
+
+  
+    <!-- // Get a reference to the dropdown element
+    const dropdown = document.getElementById('year-select');
+
+    // Add an event listener to the dropdown for 'change' event
+    dropdown.addEventListener('change', function(event) {
+      // Get the selected value (year) from the dropdown
+      const selectedYear = event.target.value;
+
+      // Log the selected year (you can replace this with your logic)
+      console.log('Selected year:', selectedYear);
+
+      // You can add further logic here, like sending an AJAX request to the server
+      // to fetch data for the selected year and generate the pie chart
+      // Example:
+      // sendRequestToServer(selectedYear); -->
+    <!-- }); -->
+  <!-- </script> -->
+
+
+
+</body>
+</html>
+
+<!-- In the above code, the Include necessary scripts...comments indicate where you'd 
+include the necessary scripts for chart generation (your-chart-library.js) 
+and your custom scripts (your-script.js). Make sure to replace these placeholder file names with
+ the actual paths to your chart library script and your custom script that handles data fetching and 
+ chart generation based on the selected year. -->
+
+ <!-- // Function to handle actions when a year is selected
+function handleYearSelection(selectedYear) {
+  // Log the selected year (replace with your logic)
+  console.log('Selected year:', selectedYear);
+
+  // Perform actions based on the selected year
+  // For example, send an AJAX request to fetch data for the selected year
+  // Example AJAX request using Fetch API
+  fetch(`/your-api-endpoint?year=${selectedYear}`)
+    .then(response => response.json())
+    .then(data => {
+      // Assuming 'data' contains the required information for the pie chart
+      // Generate the pie chart using your chart library (e.g., Chart.js)
+      generatePieChart(data);
+    })
+    .catch(error => {
+      console.error('Error fetching data:', error);
+      // Handle errors or display an error message
+    });
+}
+
+// Get a reference to the dropdown element
+const dropdown = document.getElementById('year-select');
+
+// Add an event listener to the dropdown for 'change' event
+dropdown.addEventListener('change', function(event) {
+  // Get the selected value (year) from the dropdown
+  const selectedYear = event.target.value;
+
+  // Call the function to handle actions when a year is selected
+  handleYearSelection(selectedYear);
+}); -->

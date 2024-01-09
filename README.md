@@ -9,7 +9,7 @@ Robert Crozier:  "Electric Vehicle Counts by Make as of 2023" and "Make Vs Model
 
 Clayton Stewart: "Car Make And Model Distribution"
 
-David Gooch: 
+David Gooch: Interactive "Washington State Electric Vehicle Range by Model Through The Years" scatter and line chart
 
 Wilnelia Aviles: "Top 10 Count of Cars per City", "Top 10 Make distribution count per top 10 County", "total_model_count"
 

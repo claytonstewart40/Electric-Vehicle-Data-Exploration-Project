@@ -56,25 +56,31 @@
               </select>
               <!-- Container for the pie chart -->
               <div id="chart-container" class="chart-container">
+                <div id=" pieplot"></div>
                 <!-- The pie chart will be displayed here -->
-                <img src="{{ url_for('static', filename='images/ev_counts_2023.png') }}" alt="Electric Vehicle Counts by Make as of 2023">
+                <img src="Static/images/ev_counts_2023.png" alt="Electric Vehicle Counts by Make as of 2023" >
           
                 <!-- Image for Electric Vehicles by Make in 2019 -->
-                <img src="{{ url_for('static', filename='images/ev_makes_2019.png') }}" alt="Electric Vehicles by Make in 2019">
+                <img src="Static/images/ev_makes_2019.png" alt="Electric Vehicles by Make in 2019">
                 
                 
       
-                <img src="{{ url_for('static', filename='images/ev_range.png') }}" alt="Electric Vehicle Range Over Years">
-                <img src="{{ url_for('static', filename='images/ev_range_model_over_years.png') }}" alt="Electric Vehicle Range by Model Through The Years">
+                <img src="Static/images/ev_range.png" alt="Electric Vehicle Range Over Years">
+                <img src="Static/images/ev_range_model_over_years.png" alt="Electric Vehicle Range by Model Through The Years">
       
                 <!-- Image for Top 10 Count of Cars per City -->
-                <img src="{{ url_for('static', filename='images/Top_10_cars_per_city.png') }}" alt="Top 10 Count of Cars per City">
+                <img src="Static/images/ev_range_model_over_years.png" alt="Top 10 Count of Cars per City">
           
                 <!-- Image for Top 10 Make Distribution Count by County -->
-                <img src="{{ url_for('static', filename='images/top_10_make_distribution_county.png') }}" alt="Top 10 Make Distribution Count by County">
+                <img src="Static/images/tesla_count_2019.png" alt="Top 10 Make Distribution Count by County">
       
                 <!-- Image for Total Model Count -->
-                <img src="{{ url_for('static', filename='images/total_model_count.png') }}" alt="Total Model Count">
+                <img src="Static/images/Top_10_cars_per_city.png" alt="Total Model Count">
+
+                <iframe src="Linechart.html" width="1200" height="600"></iframe>
+                <iframe src="Scatterplot.html" width="1200" height="600"></iframe>
+            
+
               </div>
             </div>
           </div>
@@ -82,24 +88,9 @@
         <!-- Include necessary scripts for chart generation -->
         <script src="https://d3js.org/d3.v7.min.js"></script>
         <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
-        <script src="{{ url_for('static', filename='JavaScript/chart-library.js') }}"></script>
-        <script src="{{ url_for('static', filename='JavaScript/piechart.js') }}"></script>
+        <script src="static/Javascript/chart-library.js"></script>
+        <script src="Static/Javascript/piechart.js"></script>
       
       </body>
       </html>
-      
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Plotly Express Charts</title>
-</head>
-<body>
-
-    <h1> Plotly Express Charts</h1>
-
-    <iframe src="Linechart.html" width="1200" height="600"></iframe>
-    <iframe src="Scatterplot.html" width="1200" height="600"></iframe>
-
-</body>
-</html>
+    

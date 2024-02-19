@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pie Chart Visualization</title>
+    <!-- Example CSS file for styling -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- Chart.js library for the pie chart -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div id="pie-chart-container" style="width: 400px; height: 400px;">
+        <canvas id="myPieChart"></canvas>
+    </div>
+
+    <!-- Pie chart JavaScript logic -->
+    <script src="piechart.js"></script>
+    <script>
+        var ctx = document.getElementById('myPieChart').getContext('2d');
+        var myPieChart = new Chart(ctx, {
+            type: 'pie',
+            data: {
+                // Example dataset
+                labels: ['Category 1', 'Category 2', 'Category 3'],
+                datasets: [{
+                    data: [10, 20, 30],
+                    backgroundColor: ['red', 'blue', 'green'],
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+            }
+        });
+    </script>
+</body>
+</html>

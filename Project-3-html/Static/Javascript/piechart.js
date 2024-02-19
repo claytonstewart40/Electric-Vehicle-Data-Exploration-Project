@@ -1,9 +1,6 @@
 
 
-  //Need to reference chart-container
-// format the below string to include the dropdown, look at module 14 or 15 to figure out the dropdown. 
-// Get the selected year from the dropdown
-// Get the selected year from the dropdown
+  
 const dropdown = document.getElementById('year-select');
 let selectedYear = 2022; // Default year, change this as needed
 
@@ -33,23 +30,36 @@ function fetchData(year) {
       });
   }
   
-  // Function to update the pie chart
-  function updatePieChart(labels, values) {
-    createPieChart('pieplot', labels, values);
+// Adjusted function to update the pie chart to use Chart.js
+function updatePieChart(labels, values) {
+  var ctx = document.getElementById('myPieChart').getContext('2d');
+  
+  // Check if the chart instance already exists. If so, destroy it before creating a new one
+  if (window.myDynamicPieChart != null) {
+    window.myDynamicPieChart.destroy();
+  }
+  
+  window.myDynamicPieChart = new Chart(ctx, {
+    type: 'pie',
+    data: {
+      labels: labels, // Your labels array
+      datasets: [{
+        data: values, // Your data array
+        backgroundColor: [
+          'red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet'
+          // Add more colors as needed
+        ]
+      }]
+    },
+    options: {
+      responsive: true,
+      title: {
+        display: true,
+        text: 'Car Make and Model Distribution for ' + selectedYear
+      }
+    }
+  });
 
-      // Plotting the pie chart using Plotly
-      const chartData = [{
-        values: values,
-        labels: labels,
-        type: 'pie'
-      }];
-
-      const layout = {
-        autosize: true,
-        height: 600,
-        width: 750,
-        title: 'Car Make and Model Distribution'
-      };
 
       Plotly.newPlot('pieplot', chartData, layout);
     }

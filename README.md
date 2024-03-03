@@ -1,4 +1,4 @@
-# Project-3
+# Electric-Vehicle-Data-Exploration-Project (Project 3)
 Project 3 - David Gooch, Clayton Stewart, Robert Crozier, Wilnelia Aviles, David Cortez
 
 Our project sought to see how the electric vehicle population is holding up through out the years in the state of Washington. We believe that there can be ample opportunites to find utility from the visualizations we fleshed out from our data. For instance, as a consumer, you could use the data to evaluate specific models of cars and how they stack up against each other. From the producer's side you could use these charts to give yourself a good idea of the viability of electric vehicles in the automobile market, as well as consumer trends. In turn, the location data could be used as a predictor for forthcoming sales, and finding areas of Washington that could be ideal for advertising to maximize profits. These are just a few of the purposes for which our insights could be used. 
